@@ -1,11 +1,12 @@
 package cmd
 
 import (
-	"droplet/dropletfile/instructions"
-	"droplet/dropletfile/parser"
 	"encoding/json"
 	"fmt"
 	"os"
+
+	"github.com/getopendroplet/droplet/dropletfile/instructions"
+	"github.com/getopendroplet/droplet/dropletfile/parser"
 
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"

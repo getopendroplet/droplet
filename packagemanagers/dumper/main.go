@@ -1,8 +1,9 @@
 package main
 
 import (
-	"droplet/packagemanagers"
 	"fmt"
+
+	"github.com/getopendroplet/droplet/packagemanagers"
 )
 
 func main() {

@@ -1,11 +1,12 @@
 package cmd
 
 import (
-	"droplet/utils"
-	"droplet/utils/table"
 	"fmt"
 	"sort"
 	"strings"
+
+	"github.com/getopendroplet/droplet/utils"
+	"github.com/getopendroplet/droplet/utils/table"
 
 	"github.com/spf13/cobra"
 )

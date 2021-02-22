@@ -1,7 +1,7 @@
 package main
 
 import (
-	"droplet/cmd"
+	"github.com/getopendroplet/droplet/cmd"
 )
 
 func main() {

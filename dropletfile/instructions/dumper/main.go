@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"droplet/dropletfile/instructions"
-	"droplet/dropletfile/parser"
+	"github.com/getopendroplet/droplet/dropletfile/instructions"
+	"github.com/getopendroplet/droplet/dropletfile/parser"
 )
 
 func main() {

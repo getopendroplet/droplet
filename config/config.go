@@ -1,11 +1,12 @@
 package config
 
 import (
-	"droplet/utils"
 	"fmt"
 	"io/ioutil"
 	"os"
 	"path/filepath"
+
+	"github.com/getopendroplet/droplet/utils"
 
 	"gopkg.in/yaml.v2"
 )

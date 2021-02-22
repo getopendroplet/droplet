@@ -1,7 +1,7 @@
 package parser
 
 import (
-	"droplet/utils/stack"
+	"github.com/getopendroplet/droplet/utils/stack"
 
 	"github.com/pkg/errors"
 )

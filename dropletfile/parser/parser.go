@@ -11,7 +11,7 @@ import (
 	"strings"
 	"unicode"
 
-	"droplet/dropletfile/command"
+	"github.com/getopendroplet/droplet/dropletfile/command"
 
 	"github.com/pkg/errors"
 )

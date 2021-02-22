@@ -1,13 +1,14 @@
 package cmd
 
 import (
-	"droplet/config"
-	"droplet/utils"
-	"droplet/utils/stack"
-	"droplet/version"
 	"fmt"
 	"os"
 	"path"
+
+	"github.com/getopendroplet/droplet/config"
+	"github.com/getopendroplet/droplet/utils"
+	"github.com/getopendroplet/droplet/utils/stack"
+	"github.com/getopendroplet/droplet/version"
 
 	"github.com/spf13/cobra"
 

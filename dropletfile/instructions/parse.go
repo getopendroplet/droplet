@@ -6,8 +6,8 @@ import (
 	"sort"
 	"strings"
 
-	"droplet/dropletfile/command"
-	"droplet/dropletfile/parser"
+	"github.com/getopendroplet/droplet/dropletfile/command"
+	"github.com/getopendroplet/droplet/dropletfile/parser"
 
 	"github.com/pkg/errors"
 )

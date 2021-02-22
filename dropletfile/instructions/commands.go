@@ -3,7 +3,7 @@ package instructions
 import (
 	"strings"
 
-	"droplet/dropletfile/parser"
+	"github.com/getopendroplet/droplet/dropletfile/parser"
 
 	"github.com/pkg/errors"
 )

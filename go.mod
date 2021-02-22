@@ -1,4 +1,4 @@
-module droplet
+module github.com/getopendroplet/droplet
 
 go 1.15
 
