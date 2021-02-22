@@ -1,0 +1,40 @@
+STAGE install
+
+ARG user1=someuser
+ARG buildno=1
+
+CONFIG nginx /etc/nginx
+
+COPY hom* /mydir/
+COPY --chown=55:mygroup files* /somedir/
+
+CRON */5 * * * * /bin/bash -c 'source $HOME/.bashrc; \
+echo $HOME'
+CRON 1 2 3 4 5 df -h
+
+DELETE hom*
+DELETE /etc/nginx
+
+ENV MY_NAME="John Doe"
+ENV MY_DOG=Rex\ The\ Dog
+
+LABeL "com.example.vendor"="ACME Incorporated"
+LABEL com.example.label-with-value="foo"
+
+PACKAGE --action=install nginx
+PACKAGE nginx php
+
+RUN /bin/bash -c 'source $HOME/.bashrc; \
+echo $HOME'
+RUN ["/bin/bash", "-c", "echo hello"]
+
+USER patrick
+
+WORKDIR /a
+WORKDIR b
+
+STAGE update
+
+
+STAGE remove
+
