@@ -5,14 +5,14 @@ func init() {
 		commands: ManagerCommands{
 			install: "pacman",
 			update:  "pacman",
-			refresh: "pacman",
+			upgrade: "pacman",
 			remove:  "pacman",
 			clean:   "pacman",
 		},
 		flags: ManagerFlags{
 			install: []string{"-S", "--needed"},
-			update:  []string{"-Su"},
-			refresh: []string{"-Syy"},
+			update:  []string{"-Syy"},
+			upgrade: []string{"-Su"},
 			remove:  []string{"-Rcs"},
 			clean:   []string{"-Sc"},
 			global:  []string{"--noconfirm"},

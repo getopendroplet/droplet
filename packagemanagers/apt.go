@@ -3,19 +3,19 @@ package packagemanagers
 func init() {
 	AddManager("apt", &Manager{
 		commands: ManagerCommands{
-			install: "apt-get",
-			update:  "apt-get",
-			refresh: "apt-get",
-			remove:  "apt-get",
-			clean:   "apt-get",
+			install: "apt",
+			update:  "apt",
+			upgrade: "apt",
+			remove:  "apt",
+			clean:   "apt",
 		},
 		flags: ManagerFlags{
-			install: []string{"add"},
-			update:  []string{"dist-upgrade"},
-			refresh: []string{"update"},
+			install: []string{"install"},
+			update:  []string{"update"},
+			upgrade: []string{"dist-upgrade"},
 			remove:  []string{"remove", "--auto-remove"},
 			clean:   []string{"clean"},
-			global:  []string{"--no-cache"},
+			global:  []string{"-y"},
 		},
 	})
 }

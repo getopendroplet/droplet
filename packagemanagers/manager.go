@@ -13,7 +13,7 @@ var (
 type ManagerCommands struct {
 	install string
 	update  string
-	refresh string
+	upgrade string
 	remove  string
 	clean   string
 }
@@ -22,7 +22,7 @@ type ManagerCommands struct {
 type ManagerFlags struct {
 	install []string
 	update  []string
-	refresh []string
+	upgrade []string
 	remove  []string
 	clean   []string
 	global  []string
@@ -59,15 +59,15 @@ func (m Manager) Update() string {
 	return fmt.Sprintf("%s %s", m.commands.update, strings.Join(args, " "))
 }
 
-// Refresh refreshes the package database.
-func (m Manager) Refresh() string {
-	if len(m.flags.refresh) == 0 {
+// Upgrade upgradees the package database.
+func (m Manager) Upgrade() string {
+	if len(m.flags.upgrade) == 0 {
 		return ""
 	}
 
-	args := append(m.flags.global, m.flags.refresh...)
+	args := append(m.flags.global, m.flags.upgrade...)
 
-	return fmt.Sprintf("%s %s", m.commands.refresh, strings.Join(args, " "))
+	return fmt.Sprintf("%s %s", m.commands.upgrade, strings.Join(args, " "))
 }
 
 // Remove removes packages from the system.

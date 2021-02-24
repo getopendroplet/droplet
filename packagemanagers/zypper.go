@@ -5,14 +5,14 @@ func init() {
 		commands: ManagerCommands{
 			install: "zypper",
 			update:  "zypper",
-			refresh: "zypper",
+			upgrade: "zypper",
 			remove:  "zypper",
 			clean:   "zypper",
 		},
 		flags: ManagerFlags{
 			install: []string{"install", "--allow-downgrade"},
 			update:  []string{"update"},
-			refresh: []string{"refresh"},
+			upgrade: []string{"upgrade"},
 			remove:  []string{"remove"},
 			clean:   []string{"clean", "-a"},
 			global:  []string{"--non-interactive", "--gpg-auto-import-keys"},

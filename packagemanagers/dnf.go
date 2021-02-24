@@ -5,14 +5,14 @@ func init() {
 		commands: ManagerCommands{
 			install: "dnf",
 			update:  "dnf",
-			refresh: "dnf",
+			upgrade: "dnf",
 			remove:  "dnf",
 			clean:   "dnf",
 		},
 		flags: ManagerFlags{
 			install: []string{"install"},
-			update:  []string{"upgrade"},
-			refresh: []string{"makecache"},
+			update:  []string{"makecache"},
+			upgrade: []string{"upgrade"},
 			remove:  []string{"remove"},
 			clean:   []string{"clean", "all"},
 			global:  []string{"-y"},
