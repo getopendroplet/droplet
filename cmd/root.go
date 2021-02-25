@@ -54,8 +54,8 @@ func init() {
 	}
 
 	// Global flags
-	rootCmd.PersistentFlags().StringVar(&globalCmd.workspacePath, "workspace", home+"/droplet", "Set workspace path")
-	rootCmd.PersistentFlags().StringVar(&globalCmd.confPath, "config", home+"/.config/droplet", "Set config path")
+	rootCmd.PersistentFlags().StringVar(&globalCmd.workspacePath, "workspace", path.Join(home, "droplet"), "Set workspace path")
+	rootCmd.PersistentFlags().StringVar(&globalCmd.confPath, "config", path.Join(home, ".config", "droplet"), "Set config path")
 	rootCmd.PersistentFlags().BoolVarP(&globalCmd.flagHelp, "help", "h", false, "Print help")
 	rootCmd.PersistentFlags().BoolVar(&globalCmd.flagLogDebug, "debug", false, "Show all debug messages")
 	rootCmd.PersistentFlags().BoolVarP(&globalCmd.flagLogVerbose, "verbose", "v", false, "Show all information messages")
