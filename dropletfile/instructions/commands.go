@@ -164,6 +164,16 @@ type CopyCommand struct {
 	Chmod string
 }
 
+// Expand variables
+func (c *CopyCommand) Expand(expander SingleWordExpander) error {
+	expandedChown, err := expander(c.Chown)
+	if err != nil {
+		return err
+	}
+	c.Chown = expandedChown
+	return expandSliceInPlace(c.SourcesAndDest, expander)
+}
+
 // CronCommand : CRON * * * * * df -h
 type CronCommand struct {
 	withNameAndCode
@@ -173,16 +183,6 @@ type CronCommand struct {
 	Month         string
 	DayOfTheWeek  string
 	ShellDependantCmdLine
-}
-
-// Expand variables
-func (c *CopyCommand) Expand(expander SingleWordExpander) error {
-	expandedChown, err := expander(c.Chown)
-	if err != nil {
-		return err
-	}
-	c.Chown = expandedChown
-	return expandSliceInPlace(c.SourcesAndDest, expander)
 }
 
 // DeleteCommand : DELETE /path

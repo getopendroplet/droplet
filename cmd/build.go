@@ -1,10 +1,9 @@
 package cmd
 
 import (
-	"encoding/json"
-	"fmt"
 	"os"
 
+	"github.com/getopendroplet/droplet/dropletfile/builder"
 	"github.com/getopendroplet/droplet/dropletfile/instructions"
 	"github.com/getopendroplet/droplet/dropletfile/parser"
 
@@ -26,7 +25,7 @@ func (c *cmdBuild) Command() *cobra.Command {
 }
 
 func (c *cmdBuild) Run(cmd *cobra.Command, args []string) error {
-	// conf := c.global.conf
+	conf := c.global.conf
 	fileName := args[0]
 	stageName := args[1]
 
@@ -56,12 +55,13 @@ func (c *cmdBuild) Run(cmd *cobra.Command, args []string) error {
 
 	stage := stages[index]
 
-	json, err := json.Marshal(stage)
-	if err != nil {
-		return err
-	}
+	builder.Build(conf, stage.Commands)
+	// json, err := json.Marshal(stage)
+	// if err != nil {
+	// 	return err
+	// }
 
-	fmt.Println(string(json))
+	// fmt.Println(string(json))
 
 	return nil
 }
