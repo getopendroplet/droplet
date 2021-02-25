@@ -36,7 +36,19 @@ func NewConfig(defaults bool) *Config {
 			"author_email":                    "getopendroplet@gmail.com",
 			"package_manager":                 "apk",
 			"package_manager_action_by_stage": "true",
-			"generator":                       "local",
+			"builder":                         "local",
+
+			// builder local commands
+			"builder.local.config":  "awk",
+			"builder.local.copy":    "cp -R",
+			"builder.local.chmod":   "chmod",
+			"builder.local.chown":   "chown",
+			"builder.local.delete":  "rm -rf",
+			"builder.local.env":     "export",
+			"builder.local.expose":  "iptables -A INPUT",
+			"builder.local.label":   "echo",
+			"builder.local.user":    "su",
+			"builder.local.workdir": "cd",
 		}
 	}
 
